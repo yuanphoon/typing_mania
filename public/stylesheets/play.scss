@@ -1,15 +1,50 @@
 body {
   text-align: center;
 
-  h1 {
-    background-color: #EEEEEE;
-  }
+  section {
+    max-width: 30rem;
+    margin: 0 auto;
+    background-color: #909090;
 
-  p {
-    background-color: #DADADA;
-  }
+    h1 {
+      background-color: #EEEEEE;
+      margin: 0 0 2rem 0;
+    }
 
-  input {
+    p {
+      background-color: #DADADA;
+    }
+
+    .info {
+      width: 20rem;
+      height: 4rem;
+      margin: 0 5rem;
+
+      .score {
+        float: right;
+        background-color: #AAAAAA;
+        width: 6rem;
+        padding: 0.5rem;
+      }
+
+    }
+
+    .game {
+      height: 15rem;
+
+      .target {
+        font-size: 4rem;
+      }
+
+    }
+
+    input {
+      margin: 2rem 0;
+      height: 4rem;
+      width: 20rem;
+      font-size: 3rem;
+      text-align: center;
+    }
 
   }
 

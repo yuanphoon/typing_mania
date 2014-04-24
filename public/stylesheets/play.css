@@ -1,9 +1,39 @@
 body {
   text-align: center;
 }
-body h1 {
-  background-color: #EEEEEE;
+body section {
+  max-width: 30rem;
+  margin: 0 auto;
+  background-color: #909090;
 }
-body p {
+body section h1 {
+  background-color: #EEEEEE;
+  margin: 0 0 2rem 0;
+}
+body section p {
   background-color: #DADADA;
+}
+body section .info {
+  width: 20rem;
+  height: 4rem;
+  margin: 0 5rem;
+}
+body section .info .score {
+  float: right;
+  background-color: #AAAAAA;
+  width: 6rem;
+  padding: 0.5rem;
+}
+body section .game {
+  height: 15rem;
+}
+body section .game .target {
+  font-size: 4rem;
+}
+body section input {
+  margin: 2rem 0;
+  height: 4rem;
+  width: 20rem;
+  font-size: 3rem;
+  text-align: center;
 }
