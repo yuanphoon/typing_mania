@@ -4,15 +4,9 @@ body {
   section {
     max-width: 30rem;
     margin: 0 auto;
-    background-color: #909090;
 
     h1 {
-      background-color: #EEEEEE;
       margin: 0 0 2rem 0;
-    }
-
-    p {
-      background-color: #DADADA;
     }
 
     .info {
@@ -22,7 +16,6 @@ body {
 
       .score {
         float: right;
-        background-color: #AAAAAA;
         width: 6rem;
         padding: 0.5rem;
       }
