@@ -47,7 +47,19 @@ module.exports = function(grunt) {
         src: 'src/<%= pkg.name %>.js',
         dest: 'build/<%= pkg.name %>.min.js'
       }
-    }
+    },
+    watch: {
+      sass: {
+        // We watch and compile sass files as normal but don't live reload here
+        files: ['public/stylesheets/*.sass'],
+        tasks: ['sass'],
+      },
+      // Here we watch the files the sass task will compile to
+      // These files are sent to the live reload server after sass compiles to them
+      // Start a live reload server on the default port 35729
+      options: { livereload: true },
+      files: ['public/**/*', 'views/**/*'],
+    },
   });
 
   // Load plugins
@@ -55,7 +67,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Default task(s).
-  grunt.registerTask('default', ['jshint', 'sass', 'concat', 'uglify']);
+  grunt.registerTask('default', ['jshint', 'sass', 'concat', 'uglify', 'watch']);
 };
