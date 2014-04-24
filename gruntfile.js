@@ -52,7 +52,7 @@ module.exports = function(grunt) {
     watch: {
       sass: {
         // We watch and compile sass files as normal but don't live reload here
-        files: ['public/stylesheets/*.sass'],
+        files: ['public/stylesheets/*.scss'],
         tasks: ['sass'],
       },
       // Here we watch the files the sass task will compile to
