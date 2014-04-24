@@ -36,6 +36,7 @@ module.exports = function(grunt) {
         },
         files: {                         // Dictionary of files
           'public/stylesheets/global.css': 'public/stylesheets/global.scss',       // 'destination': 'source'
+          'public/stylesheets/play.css': 'public/stylesheets/play.scss',
         }
       }
     },
@@ -58,7 +59,7 @@ module.exports = function(grunt) {
       // These files are sent to the live reload server after sass compiles to them
       // Start a live reload server on the default port 35729
       options: { livereload: true },
-      files: ['public/**/*', 'views/**/*'],
+      files: ['public/**/*', 'views/**/*', 'routes/*'],
     },
   });
 
