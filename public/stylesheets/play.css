@@ -1,0 +1,36 @@
+body {
+  text-align: center;
+}
+body section {
+  max-width: 30rem;
+  margin: 0 auto;
+}
+body section h1 {
+  text-align: left;
+  margin: 0 5rem 2rem 5rem;
+}
+body section .info {
+  width: 20rem;
+  height: 4rem;
+  margin: 0 5rem;
+}
+body section .info .score {
+  float: right;
+  width: 6rem;
+  padding: 0.5rem;
+  border: solid 1px;
+}
+body section .game {
+  margin: 1rem 0;
+  height: 15rem;
+}
+body section .game .target {
+  font-size: 4rem;
+}
+body section input {
+  margin: 2rem 0;
+  height: 4rem;
+  width: 20rem;
+  font-size: 3rem;
+  text-align: center;
+}

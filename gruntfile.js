@@ -36,6 +36,7 @@ module.exports = function(grunt) {
         },
         files: {                         // Dictionary of files
           'public/stylesheets/global.css': 'public/stylesheets/global.scss',       // 'destination': 'source'
+          'public/stylesheets/play.css': 'public/stylesheets/play.scss',
         }
       }
     },
@@ -51,14 +52,14 @@ module.exports = function(grunt) {
     watch: {
       sass: {
         // We watch and compile sass files as normal but don't live reload here
-        files: ['public/stylesheets/*.sass'],
+        files: ['public/stylesheets/*.scss'],
         tasks: ['sass'],
       },
       // Here we watch the files the sass task will compile to
       // These files are sent to the live reload server after sass compiles to them
       // Start a live reload server on the default port 35729
       options: { livereload: true },
-      files: ['public/**/*', 'views/**/*'],
+      files: ['public/**/*', 'views/**/*', 'routes/*'],
     },
   });
 

@@ -1,0 +1,74 @@
+body {
+  padding: 2rem;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+/*------------------------  BASE-REM SIZING  */
+@media (min-width: 1401px) {
+  html {
+    font-size: 22px;
+  }
+}
+@media (max-width: 1400px) {
+  html {
+    font-size: 21px;
+  }
+}
+/* target screen width  */
+@media (max-width: 1280px) {
+  html {
+    font-size: 20px;
+  }
+}
+@media (max-width: 1160px) {
+  html {
+    font-size: 19px;
+  }
+}
+@media (max-width: 1040px) {
+  html {
+    font-size: 18px;
+  }
+}
+@media (max-width: 920px) {
+  html {
+    font-size: 17px;
+  }
+}
+@media (max-width: 800px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media (max-width: 680px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media (max-width: 560px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media (max-width: 440px) {
+  html {
+    font-size: 13px;
+  }
+}
+@media (max-width: 320px) {
+  html {
+    font-size: 12px;
+  }
+}
