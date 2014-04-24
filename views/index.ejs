@@ -2,13 +2,27 @@
 <html>
   <head>
     <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/reset.css' />
     <link rel='stylesheet' href='/stylesheets/global.css' />
     <link rel='stylesheet' href='/stylesheets/play.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>This is where the target box is</p>
-    <input type="text" placeholder="This is where the answer box is"/>
-    <p>This is where the instructions should be</p>
+    <section>
+      <h1><%= title %></h1>
+      <hr/>
+      <section class="info">
+        <div class="score">
+          <p>Score</p>
+          <p>#</p>
+        </div>
+      </section>
+      <section class="game">
+        <p>Type the following word:</p>
+        <p class="target">target</p>
+        <input type="text" placeholder="Answer"/>
+      </section>
+      <hr/>
+      <p>This is where the instructions should be</p>
+    </section>
   </body>
 </html>
