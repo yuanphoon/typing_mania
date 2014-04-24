@@ -1,0 +1,14 @@
+{
+  "name": "typing-king",
+  "description": "An app to test typing speed",
+  "author": "Yuan Phoon",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "4.x.x"
+  },
+  "devDependencies": {
+
+  },
+  "engine": "node >= 0.10.21"
+}
