@@ -6,7 +6,8 @@ body {
     margin: 0 auto;
 
     h1 {
-      margin: 0 0 2rem 0;
+      text-align: left;
+      margin: 0 5rem 2rem 5rem;
     }
 
     .info {
@@ -18,11 +19,13 @@ body {
         float: right;
         width: 6rem;
         padding: 0.5rem;
+        border: solid 1px;
       }
 
     }
 
     .game {
+      margin: 1rem 0;
       height: 15rem;
 
       .target {
