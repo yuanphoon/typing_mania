@@ -63,6 +63,3 @@ function updateVals() {
   // Write the score into the scoreboard
   $('.score-number').text(score);
 }
-
-
-
