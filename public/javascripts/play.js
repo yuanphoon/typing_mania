@@ -19,10 +19,12 @@ var wordCollection = "sadly lacey hurst colin finca janey trade lomax louie vhf 
 
 dictionary = wordCollection.split(" ");
 
+console.log("the number of objects " + dictionary.length);
+
 console.log("the array of random words is " + dictionary);
 
 //Random integer between 0 and 100
-var randNum = Math.floor(Math.random()*100);
+var randNum = Math.floor(Math.random()*dictionary.length);
 
 var randWord = dictionary[randNum];
 
