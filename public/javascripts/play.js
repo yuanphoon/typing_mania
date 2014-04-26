@@ -9,7 +9,7 @@ var answerWord = $('.answer').val();
 console.log("the value in the answer box is " + answerWord);
 
 // The score
-var score = 0;
+var score = -1;
 
 // The array of random words
 var dictionary = [];
@@ -59,7 +59,10 @@ function updateVals() {
     $('.target').text(randWord);
 
   }
-  
+
+  if (score > 0) {
   // Write the score into the scoreboard
   $('.score-number').text(score);
+  }
+
 }
