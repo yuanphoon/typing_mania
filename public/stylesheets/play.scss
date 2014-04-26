@@ -1,5 +1,4 @@
 body {
-  text-align: center;
 
   section {
     max-width: 30rem;
@@ -15,21 +14,24 @@ body {
       height: 4rem;
       margin: 0 5rem;
 
-      .score {
+      .scoreboard {
         float: right;
         width: 6rem;
         padding: 0.5rem;
         border: solid 1px;
+        text-align: center;
       }
 
     }
 
     .game {
+      text-align: center;
       margin: 1rem 0;
-      height: 15rem;
+      height: 13rem;
 
       .target {
         font-size: 4rem;
+        font-weight: 600;
       }
 
     }

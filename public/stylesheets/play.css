@@ -1,6 +1,3 @@
-body {
-  text-align: center;
-}
 body section {
   max-width: 30rem;
   margin: 0 auto;
@@ -14,18 +11,21 @@ body section .info {
   height: 4rem;
   margin: 0 5rem;
 }
-body section .info .score {
+body section .info .scoreboard {
   float: right;
   width: 6rem;
   padding: 0.5rem;
   border: solid 1px;
+  text-align: center;
 }
 body section .game {
+  text-align: center;
   margin: 1rem 0;
-  height: 15rem;
+  height: 13rem;
 }
 body section .game .target {
   font-size: 4rem;
+  font-weight: 600;
 }
 body section input {
   margin: 2rem 0;
