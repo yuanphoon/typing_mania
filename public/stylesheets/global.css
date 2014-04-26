@@ -1,6 +1,13 @@
+html {
+  background-color: #FFEEE3;
+}
+
 body {
   padding: 2rem;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-family: 'Open Sans', 'sans-serif';
+  font-weight: 300;
+  color: #333333;
 }
 
 a {
@@ -9,9 +16,30 @@ a {
 
 h1 {
   font-size: 3rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+hr {
+  margin: 1rem 0;
 }
 
 p {
+  font-size: 1rem;
+}
+
+ol, ul {
+  list-style: disc inside;
   font-size: 1rem;
 }
 
