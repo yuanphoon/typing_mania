@@ -36,8 +36,8 @@ $('.answer').keydown(function(e) {
 });
 
 function updateVals() {
-  answerWord = $('.answer').val();
-  targetWord = $('.target').text();
+  answerWord = $('.answer').val().toLowerCase();
+  targetWord = $('.target').text().toLowerCase();
 
   console.log("the value in the answer input is: " + answerWord);
   
