@@ -21,8 +21,6 @@ dictionary = wordCollection.split(" ");
 
 console.log("the number of objects " + dictionary.length);
 
-console.log("the array of random words is " + dictionary);
-
 // Random integer between 0 and dictionary.length
 var randNum = Math.floor(Math.random()*dictionary.length);
 
