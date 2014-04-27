@@ -51,6 +51,22 @@ b, strong {
   font-weight: 700;
 }
 
+::-webkit-input-placeholder {
+   color: #DADADA;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #DADADA;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #DADADA;
+}
+
+:-ms-input-placeholder {  
+   color: #DADADA;
+}
+
 footer  {
   width: 30rem;
   margin: 2rem auto 0 auto;
