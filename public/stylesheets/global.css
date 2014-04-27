@@ -51,15 +51,27 @@ b, strong {
   font-weight: 700;
 }
 
+::-webkit-input-placeholder {
+  color: #DADADA;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #DADADA;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #DADADA;
+}
+
+:-ms-input-placeholder {
+  color: #DADADA;
+}
+
 footer {
   width: 30rem;
   margin: 2rem auto 0 auto;
-}
-footer .author {
-  float: left;
-}
-footer .powered-by {
-  float: right;
 }
 
 /*------------------------  BASE-REM SIZING  */
@@ -111,11 +123,11 @@ footer .powered-by {
 }
 @media (max-width: 440px) {
   html {
-    font-size: 13px;
+    font-size: 14px;
   }
 }
 @media (max-width: 320px) {
   html {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
