@@ -37,6 +37,8 @@ $( document ).ready(function() {
 
   var wordsPerMinute = 0;
 
+  var maxWordsPerMinute = 0;
+
   // When a key in the answer box is pressed, run function.
   $('.answer').keyup(updateVals);
 
@@ -100,7 +102,15 @@ $( document ).ready(function() {
 
       // Write the words per minute score into the mark up
       $('.wpm-number').text(wordsPerMinute.toFixed(1));
-      }
+
+      // var wordsPerMinuteArray = [];
+
+      // wordsPerMinuteArray.push(wordsPerMinute);
+
+      // maxWordsPerMinute = Math.max(null, wordsPerMinuteArray);
+      // console.log("the maxWPM is" + wordsPerMinuteArray);
+
+    }
 
     }, 1000);
 
