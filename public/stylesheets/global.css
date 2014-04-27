@@ -111,11 +111,11 @@ footer .powered-by {
 }
 @media (max-width: 440px) {
   html {
-    font-size: 13px;
+    font-size: 14px;
   }
 }
 @media (max-width: 320px) {
   html {
-    font-size: 12px;
+    font-size: 14px;
   }
 }

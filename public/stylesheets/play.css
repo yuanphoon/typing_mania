@@ -10,14 +10,13 @@ body section h1 {
   margin: 0 5rem 2rem 5rem;
 }
 body section .info {
-  width: 20rem;
+  width: auto;
   height: 4rem;
-  margin: 0 5rem;
+  text-align: center;
 }
 body section .info .info-box {
-  float: right;
+  display: inline-block;
   width: 5rem;
-  margin: 0 0.25rem;
   padding: 0.5rem;
   border-radius: 1rem;
   text-align: center;
