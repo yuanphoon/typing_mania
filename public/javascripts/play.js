@@ -51,8 +51,6 @@ $( document ).ready(function() {
   function updateVals() {
     answerWord = $('.answer').val().toLowerCase();
     targetWord = $('.target').text().toLowerCase();
-
-    console.log("the value in the answer input is: " + answerWord);
     
     // If the answer matches the target, run the code within
     if (answerWord === targetWord) {
@@ -82,13 +80,13 @@ $( document ).ready(function() {
 
   // Run methods in here every second
   setInterval(function(){
-      // Store the time when the game starts
-      if (score === -1) {
-        startTime = new Date();
-        startTimeMs = startTime.getTime();
-      }
+    // Store the time when the game starts
+    if (score === -1) {
+      startTime = new Date();
+      startTimeMs = startTime.getTime();
+    }
 
-      else {
+    else {
       // Keep checking the time
       currentTime = new Date();
       currentTimeMs = currentTime.getTime();
@@ -103,15 +101,13 @@ $( document ).ready(function() {
       // Write the words per minute score into the mark up
       $('.wpm-number').text(wordsPerMinute.toFixed(1));
 
-      // var wordsPerMinuteArray = [];
-
-      // wordsPerMinuteArray.push(wordsPerMinute);
-
-      // maxWordsPerMinute = Math.max(null, wordsPerMinuteArray);
-      // console.log("the maxWPM is" + wordsPerMinuteArray);
+      // If the WPM is greater than what's in the maxWPM box, overwrite it. 
+      if (wordsPerMinute > $('.max-wpm-number').text()) {
+        $('.max-wpm-number').text(wordsPerMinute.toFixed(1));
+      }
 
     }
 
-    }, 1000);
+  }, 1000);
 
 });
