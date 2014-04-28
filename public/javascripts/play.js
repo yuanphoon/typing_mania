@@ -29,6 +29,10 @@ $( document ).ready(function() {
 
   var randWord = dictionary[randNum];
 
+  var tarWordSplit = 0;
+
+  var tarWordLength = 0;
+
   var time = 0;
 
   var currentTime = 0;
@@ -66,10 +70,24 @@ $( document ).ready(function() {
 
       // Clear the answer box
       $('.answer').val("");
-      //Insert the new word into the target box
-      $('.target').text(randWord);
+      // Clear the target box
+      $('.target').text("");
+      // Split the target word up into an array
+      tarWordSplit = randWord.split("");
+      // Find the length of the array (the word)
+      tarWordLength = tarWordSplit.length;
+
+      // Write into the target box, each letter wrapped in a span
+      for (var i=0; i<tarWordLength; i++)
+      {
+        $('.target').append('<span>' + tarWordSplit[i] + '</span>');
+      }
 
     }
+
+    // Split the answer word up into an array
+    ansWordSplit = answerWord.split("");
+
 
     if (score > 0) {
     // Write the score into the scoreboard
