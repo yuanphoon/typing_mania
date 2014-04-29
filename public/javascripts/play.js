@@ -29,6 +29,14 @@ $( document ).ready(function() {
 
   var randWord = dictionary[randNum];
 
+  var tarWordSplit = 0;
+
+  var tarWordLength = 0;
+
+  var lowerCaseTarWordSplit = 0;
+
+  var ansWordLength = 0;
+
   var time = 0;
 
   var currentTime = 0;
@@ -66,10 +74,48 @@ $( document ).ready(function() {
 
       // Clear the answer box
       $('.answer').val("");
-      //Insert the new word into the target box
-      $('.target').text(randWord);
+      // Clear the target box
+      $('.target').empty();
+      answerWord = "";
+      // Clear the target word array
+      tarWordSplit = [];
+      // Clear the answer word array
+      ansWordSplit = [];
+      // Split the target word up into an array
+      tarWordSplit = randWord.split("");
+      // Find the length of the array (the word)
+      tarWordLength = tarWordSplit.length;
+
+      // Write into the target box, each letter wrapped in a span
+      for (var i=0; i<tarWordLength; i++)
+      {
+        $('.target').append('<span>' + tarWordSplit[i] + '</span>');
+      }
+
+      // Remove class from spans in .target
+      $('.target span').removeClass('correct-letter');
+
+      lowerCaseTarWordSplit = randWord.toLowerCase().split("");
 
     }
+
+    // Split the answer word var up into an array
+    ansWordSplit = answerWord.toLowerCase().split("");
+    // Get length of answer array
+    ansWordLength = ansWordSplit.length;
+
+    for (var j=0; j<tarWordLength; j++) {
+      if (ansWordSplit[j] === lowerCaseTarWordSplit[j]) {
+        $('.target span').eq(j).css("color", "#00FF00");
+      }
+      else if (ansWordSplit[j] !== lowerCaseTarWordSplit[j]) {
+        $('.target span').eq(j).css("color", "#333333");
+      }
+
+    }
+
+    console.log(lowerCaseTarWordSplit);
+    console.log(ansWordSplit);
 
     if (score > 0) {
     // Write the score into the scoreboard
