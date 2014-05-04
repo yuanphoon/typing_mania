@@ -132,6 +132,22 @@ $( document ).ready(function() {
       startTimeMs = startTime.getTime();
     }
 
+    else if (score < 3) {
+      // Keep checking the time
+      currentTime = new Date();
+      currentTimeMs = currentTime.getTime();
+
+      // Work out the time the game is active
+      timeElapsed = currentTimeMs - startTimeMs;
+      timeElapsedS = timeElapsed/1000;
+
+      // Work out the words per minute
+      wordsPerMinute = ((60/timeElapsedS)*score);
+
+      // Write the words per minute score into the mark up
+      $('.wpm-number').text(wordsPerMinute.toFixed(1));
+    }
+
     else {
       // Keep checking the time
       currentTime = new Date();
