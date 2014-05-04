@@ -46,6 +46,16 @@ $( document ).ready(function() {
     }
   });
 
+  $('.answer').keydown(function(e) {
+    if(e.which == 32) {
+      console.log('space');
+      $('.game p').css('display', 'none');
+      $('.game input').css('display','none');
+      $('.game .pause').css('display', 'inline');
+      $('.game .resume').css('display', 'block');
+    }
+  });
+
   function updateVals() {
     answerWord = $('.answer').val().toLowerCase();
     targetWord = $('.target').text().toLowerCase();
