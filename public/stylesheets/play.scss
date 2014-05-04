@@ -44,6 +44,17 @@ body {
         font-weight: 600;
       }
 
+      .resume {
+        display: none;
+        margin: 2rem auto;
+        font-size: 2rem;
+        padding: 0.5rem;
+        border-radius: 1rem;
+        background-color: #FF7F50;
+        color: #FFFFFF;
+        outline: none;
+      }
+
     }
 
     input {

@@ -38,6 +38,16 @@ body section .game .pause {
   font-size: 4rem;
   font-weight: 600;
 }
+body section .game .resume {
+  display: none;
+  margin: 2rem auto;
+  font-size: 2rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  background-color: #FF7F50;
+  color: #FFFFFF;
+  outline: none;
+}
 body section input {
   height: 4rem;
   width: 20rem;
