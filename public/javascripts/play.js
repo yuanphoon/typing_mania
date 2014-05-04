@@ -26,25 +26,15 @@ $( document ).ready(function() {
 
   // Random integer between 0 and dictionary.length
   var randNum = Math.floor(Math.random()*dictionary.length);
-
   var randWord = dictionary[randNum];
-
   var tarWordSplit = 0;
-
   var tarWordLength = 0;
-
   var lowerCaseTarWordSplit = 0;
-
   var ansWordLength = 0;
-
   var time = 0;
-
   var currentTime = 0;
-
   var timeElapsed = 0;
-
   var wordsPerMinute = 0;
-
   var maxWordsPerMinute = 0;
 
   // When a key in the answer box is pressed, run function.
@@ -91,9 +81,6 @@ $( document ).ready(function() {
       {
         $('.target').append('<span>' + tarWordSplit[i] + '</span>');
       }
-
-      // Remove class from spans in .target
-      $('.target span').removeClass('correct-letter');
 
       lowerCaseTarWordSplit = randWord.toLowerCase().split("");
 
