@@ -46,6 +46,7 @@ $( document ).ready(function() {
     }
   });
 
+  // Behaviour when space is pressed in the input box
   $('.answer').keydown(function(e) {
     if(e.which == 32) {
       console.log('space');
@@ -56,44 +57,67 @@ $( document ).ready(function() {
     }
   });
 
-  function updateVals() {
+  function increaseScore() {
+    // Increase the score by 1
+    score++;
+  }
+
+  function generateVals() {
+    // Generate a new random number
+    randNum = Math.floor(Math.random()*dictionary.length);
+    console.log("The random number is " + randNum);
+    // Generate a new randomword
+    randWord = dictionary[randNum];
+    console.log("The random word is " + randWord);
+  }
+
+  function clearVals() {
+    // Clear the answer box
+    $('.answer').val("");
+    // Clear the target box
+    $('.target').empty();
+    answerWord = "";
+  }
+
+  function clearValArrays() {
+    // Clear the target word array
+    tarWordSplit = [];
+    // Clear the answer word array
+    ansWordSplit = [];
+  }
+
+  function valsLowerCase() {
     answerWord = $('.answer').val().toLowerCase();
     targetWord = $('.target').text().toLowerCase();
-    
-    // If the answer matches the target, run the code within
-    if (answerWord === targetWord) {
-      // Increase the score by 1
-      score++;
+  }
 
-      // Generate a new random number
-      randNum = Math.floor(Math.random()*dictionary.length);
-      console.log("The random number is " + randNum);
-      // Generate a new randomword
-      randWord = dictionary[randNum];
-      console.log("The random word is " + randWord);  
-
-      // Clear the answer box
-      $('.answer').val("");
-      // Clear the target box
-      $('.target').empty();
-      answerWord = "";
-      // Clear the target word array
-      tarWordSplit = [];
-      // Clear the answer word array
-      ansWordSplit = [];
+  function splitVals() {
       // Split the target word up into an array
       tarWordSplit = randWord.split("");
       // Find the length of the array (the word)
       tarWordLength = tarWordSplit.length;
+  }
 
-      // Write into the target box, each letter wrapped in a span
-      for (var i=0; i<tarWordLength; i++)
+  function writeTarVal() {
+    // Write into the target box, each letter wrapped in a span
+    for (var i=0; i<tarWordLength; i++)
       {
         $('.target').append('<span>' + tarWordSplit[i] + '</span>');
       }
 
       lowerCaseTarWordSplit = randWord.toLowerCase().split("");
+  }
 
+  function updateVals() {
+    valsLowerCase();
+    // If the answer matches the target, run the code within
+    if (answerWord === targetWord) {
+      increaseScore();
+      generateVals();
+      clearVals();
+      clearValArrays();
+      splitVals();
+      writeTarVal();
     }
 
     // Split the answer word var up into an array
