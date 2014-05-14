@@ -179,6 +179,8 @@ $( document ).ready(function() {
   // When a key in the answer box is pressed, run function.
   $('.answer').keyup(goingUp);
 
+  $('.answer').keydown(goingDown);
+
   
   $('.answer').keydown(function(e) {
     // Behaviour when space is pressed in the input box
@@ -198,17 +200,37 @@ $( document ).ready(function() {
 
 // --------------EVENTS---------------
 
+  function bigFail() {
+
+  }
+
+  function matchWord() {
+    console.log("matchWord has been called");
+    increaseScore();
+    clearVals();
+    clearValArrays();
+    generateVals();
+    splitTarVals();
+    writeTarVal();
+    writeScore();
+  }
+
+  function goingDown() {
+    valsLowerCase();
+    // If the answer matches the target, run the code within
+    if (answerWord === targetWord) {
+      matchWord();
+    }
+
+    splitAnsVal();
+    checkArrays();
+  }
+
   function goingUp() {
     valsLowerCase();
     // If the answer matches the target, run the code within
     if (answerWord === targetWord) {
-      increaseScore();
-      clearVals();
-      clearValArrays();
-      generateVals();
-      splitTarVals();
-      writeTarVal();
-      writeScore();
+      matchWord();
     }
 
     splitAnsVal();
