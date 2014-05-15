@@ -32,6 +32,9 @@ body section .game .target {
   font-size: 4rem;
   font-weight: 600;
 }
+body section .game .pause-text {
+  display: none;
+}
 body section .game .pause {
   display: none;
   margin: 1rem 0 2rem 0;
