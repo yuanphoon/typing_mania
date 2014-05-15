@@ -199,7 +199,8 @@ $( document ).ready(function() {
   function pauseEvent() {
     $('.game p').css('display', 'none');
     $('.game input').css('display','none');
-    $('.game .pause').css('display', 'inline');
+    $('.game .pause-text').css('display', 'block');
+    $('.game .pause').css('display', 'block');
     $('.game .resume').css('display', 'block');
     pause = true;
     pauseTime = new Date();
@@ -209,8 +210,10 @@ $( document ).ready(function() {
   function resumeEvent() {
     $('.game p').css('display', 'block');
     $('.game input').css('display','inline-block');
+    $('.game .pause-text').css('display', 'none');
     $('.game .pause').css('display', 'none');
     $('.game .resume').css('display', 'none');
+    $('.game .fail').css('display', 'none');
     pause = false;
     resumeTime = new Date();
     resumeTimeMs = resumeTime.getTime();
@@ -244,6 +247,7 @@ $( document ).ready(function() {
   });
 
   $('.resume').click(resumeEvent);
+  $('.again').click(setZero);
 
 
 // --------------EVENTS---------------
