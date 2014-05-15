@@ -103,12 +103,23 @@ $( document ).ready(function() {
   }
 
   function checkArrays() {
-    for (var j=0; j<tarWordLength; j++) {
-      if (ansWordSplit[j] === lowerCaseTarWordSplit[j]) {
-        $('.target span').eq(j).css("color", "#00FF00");
-      }
-      else if (ansWordSplit[j] !== lowerCaseTarWordSplit[j]) {
-        $('.target span').eq(j).css("color", "#333333");
+    console.log(ansWordSplit);
+    console.log(lowerCaseTarWordSplit);
+    // if (ansWordSplit[ansWordLength-1] === lowerCaseTarWordSplit[ansWordLength-1]) {
+    //   $('.target span').eq(ansWordLength-1).css("color", "#00933B");
+    // }
+    // else if (ansWordSplit[ansWordLength-1] !== lowerCaseTarWordSplit[ansWordLength-1]) {
+    //   bigFail();
+    // };
+    if (ansWordSplit.length > 0) {
+      for (var j=0; j<ansWordLength; j++) {
+        if (ansWordSplit[j] === targetWord.split("")[j]) {
+          $('.target span').eq(j).css("color", "#00933B");
+        }
+        else if (ansWordSplit[j] !== targetWord.split("")[j]) {
+          $('.target span').eq(j).css("color", "red");
+          bigFail();
+        }
       }
     }
   }
