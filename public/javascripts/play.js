@@ -24,17 +24,16 @@ $( document ).ready(function() {
   var tarWordSplit;
   var tarWordLength;
   var lowerCaseTarWordSplit = ["s","t","a","r","t"];
-  var ansWordLength;
+  var ansWordLength = 0;
   var time;
   var currentTime;
   var currentTimeMs;
   var timeElapsed;
-  var wordsPerMinute;
-  var maxWordsPerMinute;
-  var pause;
-  var totalPaused;
-  var pauseTimeMs;
-  var ansPosition;
+  var wordsPerMinute = 0;
+  var maxWordsPerMinute = 0;
+  var pause = false;
+  var totalPaused = 0;
+  var pauseTimeMs = 0;
 
 
 
