@@ -248,9 +248,6 @@ $( document ).ready(function() {
     splitAnsVal();
     checkArrays();
     
-    // console.log(lowerCaseTarWordSplit);
-    // console.log(ansWordSplit);
-
   }
 
   // Run methods in here every second
