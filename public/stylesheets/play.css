@@ -25,12 +25,15 @@ body section .info .info-box {
 }
 body section .game {
   text-align: center;
-  height: 13rem;
+  height: 16rem;
 }
 body section .game .target {
   margin: 1rem 0 2rem 0;
   font-size: 4rem;
   font-weight: 600;
+}
+body section .game .pause-text {
+  display: none;
 }
 body section .game .pause {
   display: none;
@@ -39,6 +42,22 @@ body section .game .pause {
   font-weight: 600;
 }
 body section .game .resume {
+  display: none;
+  margin: 2rem auto;
+  font-size: 2rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  background-color: #FF7F50;
+  color: #FFFFFF;
+  outline: none;
+}
+body section .game .fail {
+  display: none;
+  margin: 1rem 0 2rem 0;
+  font-size: 4rem;
+  font-weight: 600;
+}
+body section .game .again {
   display: none;
   margin: 2rem auto;
   font-size: 2rem;
