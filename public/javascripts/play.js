@@ -21,19 +21,20 @@ $( document ).ready(function() {
   // Random integer between 0 and dictionary.length
   var randNum = Math.floor(Math.random()*dictionary.length);
   var randWord = dictionary[randNum];
-  var tarWordSplit = [];
-  var tarWordLength = 0;
-  var lowerCaseTarWordSplit = [];
-  var ansWordLength = 0;
-  var time = 0;
-  var currentTime = 0;
-  var currentTimeMs = 0;
-  var timeElapsed = 0;
-  var wordsPerMinute = 0;
-  var maxWordsPerMinute = 0;
-  var pause = false;
-  var totalPaused = 0;
-  var pauseTimeMs = 0;
+  var tarWordSplit;
+  var tarWordLength;
+  var lowerCaseTarWordSplit = ["s","t","a","r","t"];
+  var ansWordLength;
+  var time;
+  var currentTime;
+  var currentTimeMs;
+  var timeElapsed;
+  var wordsPerMinute;
+  var maxWordsPerMinute;
+  var pause;
+  var totalPaused;
+  var pauseTimeMs;
+  var ansPosition;
 
 
 
