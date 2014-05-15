@@ -216,10 +216,6 @@ $( document ).ready(function() {
 
 // --------------EVENTS---------------
 
-  function bigFail() {
-
-  }
-
   function matchWord() {
     console.log("matchWord has been called");
     increaseScore();
