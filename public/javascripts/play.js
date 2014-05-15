@@ -96,6 +96,10 @@ $( document ).ready(function() {
     ansWordSplit = answerWord.toLowerCase().split("");
     // Get length of answer array
     ansWordLength = ansWordSplit.length;
+  } 
+
+  function bigFail() {
+    $('body').css('background', 'linear-gradient(#FFFFFF, red)')
   }
 
   function checkArrays() {
