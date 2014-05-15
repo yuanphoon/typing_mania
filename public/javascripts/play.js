@@ -98,7 +98,45 @@ $( document ).ready(function() {
   } 
 
   function bigFail() {
-    $('body').css('background', 'linear-gradient(#FFFFFF, red)')
+    console.log("bigFailCalled")
+    $('body').css('background', 'linear-gradient(#FFFFFF, #F90101)')
+    $('html').css('background', '#F90101')
+    $('.game input').css('display','none');
+    $('.game .fail').css('display', 'inline');
+    $('.game .again').css('display', 'block');
+    pause = true;
+    pauseTime = new Date();
+    pauseTimeMs = pauseTime.getTime();
+  }
+
+  function setZero() {
+    // RESET THE STATE OF THE PAGE BACK TO HOW IT ORIGINALLY IS
+    $('body').removeAttr('style');
+    $('html').removeAttr('style');
+    $('.game p').css('display', 'block');
+    $('.game input').css('display','inline-block');
+    $('.game .pause-text').css('display', 'none');
+    $('.game .pause').css('display', 'none');
+    $('.game .resume').css('display', 'none');
+    $('.game .fail').css('display', 'none');
+    $('.game .again').css('display', 'none');
+    $('.answer').val("");
+    $('.target').text("start");
+    $('.score-number').text("0");
+    $('.wpm-number').text("0");
+    $('.max-wpm-number').text("0");
+    score = -1;
+    lowerCaseTarWordSplit = ["s","t","a","r","t"];
+    ansWordLength = 0;
+    time = 0;
+    currentTime = 0;
+    currentTimeMs = 0;
+    timeElapsed = 0;
+    wordsPerMinute = 0;
+    maxWordsPerMinute = 0;
+    pause = false;
+    totalPaused = 0;
+    pauseTimeMs = 0;
   }
 
   function checkArrays() {
