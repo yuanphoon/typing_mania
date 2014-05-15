@@ -105,12 +105,7 @@ $( document ).ready(function() {
   function checkArrays() {
     console.log(ansWordSplit);
     console.log(lowerCaseTarWordSplit);
-    // if (ansWordSplit[ansWordLength-1] === lowerCaseTarWordSplit[ansWordLength-1]) {
-    //   $('.target span').eq(ansWordLength-1).css("color", "#00933B");
-    // }
-    // else if (ansWordSplit[ansWordLength-1] !== lowerCaseTarWordSplit[ansWordLength-1]) {
-    //   bigFail();
-    // };
+    
     if (ansWordSplit.length > 0) {
       for (var j=0; j<ansWordLength; j++) {
         if (ansWordSplit[j] === targetWord.split("")[j]) {
