@@ -104,6 +104,7 @@ $( document ).ready(function() {
     $('.game input').css('display','none');
     $('.game .fail').css('display', 'inline');
     $('.game .again').css('display', 'block');
+    $('.again').focus();
     pause = true;
     pauseTime = new Date();
     pauseTimeMs = pauseTime.getTime();
@@ -125,6 +126,7 @@ $( document ).ready(function() {
     $('.score-number').text("0");
     $('.wpm-number').text("0");
     $('.max-wpm-number').text("0");
+    $('.answer').focus();
     score = -1;
     lowerCaseTarWordSplit = ["s","t","a","r","t"];
     ansWordLength = 0;
@@ -202,6 +204,7 @@ $( document ).ready(function() {
     $('.game .pause-text').css('display', 'block');
     $('.game .pause').css('display', 'block');
     $('.game .resume').css('display', 'block');
+    $('.resume').focus();
     pause = true;
     pauseTime = new Date();
     pauseTimeMs = pauseTime.getTime();
@@ -214,6 +217,7 @@ $( document ).ready(function() {
     $('.game .pause').css('display', 'none');
     $('.game .resume').css('display', 'none');
     $('.game .fail').css('display', 'none');
+    $('.answer').focus();
     pause = false;
     resumeTime = new Date();
     resumeTimeMs = resumeTime.getTime();
@@ -226,7 +230,9 @@ $( document ).ready(function() {
   }
 
 // ---------------TRIGGERS-------------
-
+  
+  // When the game first loads, make the answer box the focus
+  $('.answer').focus();
   // When a key in the answer box is pressed, run function.
   $('.answer').keyup(goingUp);
 
