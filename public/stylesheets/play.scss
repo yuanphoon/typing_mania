@@ -6,7 +6,7 @@ body {
     margin: 0 auto;
 
     h1 {
-      text-align: left;
+      text-align: center;
       margin: 0 5rem 2rem 5rem;
     }
 
@@ -89,6 +89,14 @@ body {
       outline: none;
     }
 
+  }
+
+  footer {
+    width: 100%;
+    text-align: center;
+    input {
+      display: inline-block;
+    }
   }
 
 }
