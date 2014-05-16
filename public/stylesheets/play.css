@@ -6,7 +6,7 @@ body section {
   margin: 0 auto;
 }
 body section h1 {
-  text-align: left;
+  text-align: center;
   margin: 0 5rem 2rem 5rem;
 }
 body section .info {
@@ -75,4 +75,11 @@ body section input {
   box-shadow: none;
   border-radius: 1rem;
   outline: none;
+}
+body footer {
+  width: 100%;
+  text-align: center;
+}
+body footer input {
+  display: inline-block;
 }
