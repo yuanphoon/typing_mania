@@ -23,6 +23,9 @@ body section .info .info-box {
   background-color: #CDB38B;
   color: #FFFFFF;
 }
+body section .info .info-box .selected {
+  text-decoration: underline;
+}
 body section .game {
   text-align: center;
   height: 16rem;
