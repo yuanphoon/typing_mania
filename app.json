@@ -1,0 +1,21 @@
+{
+  "name": "Typing-Mania",
+  "description": "An app to test typing skills.",
+  "keywords": [
+    "WPM",
+    "typing",
+    "speed",
+    "test",
+    "HTML5",
+    "nodeJS",
+    "Express",
+    "jQuery"
+  ],
+  "website": "https://typing-mania.com/",
+  "repository": "https://github.com/yuanphoon/typing-mania",
+  "logo": "https://avatars3.githubusercontent.com/u/5627669?s=140",
+  "success_url": "/index",
+  "scripts": {
+    "postdeploy": "npm start"
+  }
+}
