@@ -7,7 +7,8 @@ This is a fun little game I came up with, mostly to prove to my fellow team memb
 
 Currently it is hosted on Heroku and you can play around with it here: http://typing-mania.herokuapp.com/
 
-Deploy to heroku here
+Deploy to heroku here:
+
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
 
